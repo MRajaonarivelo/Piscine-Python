@@ -3,7 +3,14 @@ ft_tuple = ("Hello", "toto!")
 ft_set = {"Hello", "tutu!"}
 ft_dict = {"Hello" : "titi!"}
 
-#your code here
+ft_list[1] = "World!"
+
+a ,b = ft_tuple
+b = "France!"
+
+ft_set
+
+ft_dict["Hello"] = "42Paris!"
 
 print(ft_list)
 print(ft_tuple)
