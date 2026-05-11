@@ -10,6 +10,12 @@ def assrertExit(e: any):
 
 
 def main():
+    """
+    Counts the characters in a given text. Character count is divided
+    between upper and lower case letters, punctuation marks,
+    spaces and digits. If no text is specified, user will be prompted
+    for one.
+    """
     args = sys.argv
     text = ""
     try:
@@ -19,7 +25,7 @@ def main():
     if len(args) == 1 or args[1] == "":
         try:
             text = sys.stdin.readline()
-        except KeyboardInterrupt as e:
+        except KeyboardInterrupt:
             print("\nError: Keyboard interruption!")
             sys.exit()
         try:
