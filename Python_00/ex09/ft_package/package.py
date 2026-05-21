@@ -1,5 +1,9 @@
-def count_in_list(l, a):
+def count_in_list(list, a):
     """
-    returns the number of occurences of a in l.
+    returns the number of occurences of a in list.
     """
-    return (len([v for v in l if v == a]))
+    return (len([v for v in list if v == a]))
+
+def rev_list(list):
+    """returns a reversed built from list"""
+    return list[::-1]

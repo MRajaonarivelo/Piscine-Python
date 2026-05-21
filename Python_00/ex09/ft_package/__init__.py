@@ -1,7 +1,3 @@
-from package import count_in_list
+from ft_package.package import count_in_list, rev_list
 
-def main():
-    count_in_list()
-
-if __name__ == "__main__":
-    main()
+__all__ = ["count_in_list", "rev_list"]
