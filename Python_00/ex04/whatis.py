@@ -8,7 +8,9 @@ if (len(args) == 1):
 try:
 	assert len(args) <= 2, "more than one argument is provided"
 	value = args[1]
-	if value[0] == '-':
+	if value.find("--", 0) != -1:
+		value = "Error"
+	elif value[0] == '-':
 		value = value.lstrip('-')
 	assert value.isdigit(), "argument is not an integer"
 except AssertionError as e:
