@@ -30,7 +30,7 @@ def main():
     except AssertionError:
         print("AssertionError: the arguments are bad")
         sys.exit()
-    coded = [NESTED_MORSE.get(c.capitalize()) for c in args[1]]
+    coded = [NESTED_MORSE.get(c.upper()) for c in args[1]]
     print(str.join('', coded))
 
 

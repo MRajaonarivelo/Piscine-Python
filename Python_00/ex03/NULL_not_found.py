@@ -1,14 +1,20 @@
+def is_null(object):
+	return (object is None
+		or object != object
+		or (isinstance(object, bool) and False)
+		or (isinstance(object, str) and object == "")
+		or (isinstance(object, int) and object == 0))
+
 def NULL_not_found(object: any) -> int:
-	if object is None:
-		print(f"Nothing : None {type(object)}")
-	elif object != object:
-		print(f"Cheese : nan {type(object)}")
-	elif isinstance(object, bool) and not object:
-		print(f"Fake : False {type(object)}")
-	elif isinstance(object, str) and object == "":
-		print(f"Empty : {type(object)}")
-	elif isinstance(object, int) and object == 0:
-		print(f"Zero : 0 {type(object)}")
+	labels = {
+		type(None): "Nothing",
+		float: "Cheese",
+		bool: "Fake",
+		str: "Empty",
+		int: "Zero"
+	}
+	if is_null(object):
+		print(f"{labels.get(type(object))} : {object} {type(object)}")
 	else:
 		print("Type not found")
 		return 1
