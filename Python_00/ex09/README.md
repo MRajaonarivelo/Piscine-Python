@@ -1,0 +1,1 @@
+A small test package containing a few functions on lists.
