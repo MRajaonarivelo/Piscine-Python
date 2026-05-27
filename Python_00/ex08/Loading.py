@@ -16,5 +16,5 @@ def ft_tqdm(lst: range) -> None:
         empty = bar_width - filled
         bar = "█" * filled + " " * empty
         total = f"| {i+1:{len_digits}d}/{len(lst)}"
-        print(f"{percent:3.0f}%|" + bar + total + "\r", end="",flush=True)
+        print(f"{percent:3.0f}%|" + bar + total + "\r", end="", flush=True)
         yield v
