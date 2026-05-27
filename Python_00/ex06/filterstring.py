@@ -22,7 +22,7 @@ def main():
 
     s = args[1]
     n = int(args[2])
-    words = s.split(" ")
+    words = s.split()
     words = [w for w in words if w != ""]
     print(ft_filter(lambda x: len(x) > n, words))
 

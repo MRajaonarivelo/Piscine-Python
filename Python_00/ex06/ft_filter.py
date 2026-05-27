@@ -2,10 +2,8 @@ import sys
 
 
 def ft_filter(func, iter):
-    """
-    returns an iterable object containing every element
-    of iter for which func returns true
-    """
+    """Return an iterator yielding those items of iterable for which function(item)
+    is true. If function is None, return the items that are true."""
     try:
         assert {callable(func) or func is None,
                 "func must be a callable!"}

@@ -24,6 +24,7 @@ def main():
         assrertExit(e)
     if len(args) == 1 or args[1] == "":
         try:
+            print("What is the text to count?")
             text = sys.stdin.readline()
         except KeyboardInterrupt:
             print("\nError: Keyboard interruption!")
