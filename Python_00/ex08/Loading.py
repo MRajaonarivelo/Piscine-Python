@@ -1,7 +1,7 @@
 import os
 
 
-def ft_tqdm(lst: range) -> None:
+def ft_tqdm(lst: range) -> None:  # type: ignore
     """
     Takes in an iterable and yields each item one by one
     and displays a progress bar, scaled to the size of the
