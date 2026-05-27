@@ -26,7 +26,7 @@ def main():
         assert len(args) == 2
         assert isinstance(args[1], str)
         for c in args[1]:
-            assert c.isalnum() or c.isspace()
+            assert c.isalnum() or c == ' '
     except AssertionError:
         print("AssertionError: the arguments are bad")
         sys.exit()
