@@ -2,8 +2,11 @@ import sys
 
 
 def ft_filter(func, iter):
-    """Return an iterator yielding those items of iterable for which function(item)
-    is true. If function is None, return the items that are true."""
+    """
+    Return an iterator yielding those items of
+    iterable for which function(item)
+    is true. If function is None, return the items that are true.
+    """
     try:
         assert {callable(func) or func is None,
                 "func must be a callable!"}
@@ -16,3 +19,8 @@ def ft_filter(func, iter):
         return [i for i in iter if bool(i)]
     else:
         return [i for i in iter if func(i)]
+
+
+ft_filter.__doc__ = ("Return an iterator yielding those items of iterable "
+                     "for which function(item)\nis true. If function is "
+                     "None, return the items that are true.")
