@@ -17,7 +17,7 @@ def slice_me(family: list, start: int, end: int) -> list:
         print(f"AssertionError: {e}")
         exit()
 
-    print(f"My shape is : {len(family), len(family[0])}")
+    print(f"My shape is : {np.array(family).shape}")
     res = family[start:end]
-    print(f"my new shape is : {len(res), len(res[0])}")
+    print(f"my new shape is : {np.array(res).shape}")
     return res
