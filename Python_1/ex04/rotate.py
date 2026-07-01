@@ -2,14 +2,14 @@ from load_image import ft_load
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 def main():
     img = ft_load("animal.jpeg")
     print(img)
     zoom = img[100:500, 450:850, 0:1]
-    print(f"New shape after slicing: {zoom.shape} or {np.squeeze(zoom).shape}")
+    print(f"The shape of the image is: {zoom.shape} or {np.squeeze(zoom).shape}")
     print(zoom)
-    plt.imshow(zoom, 'gray')
+    trans = [[zoom[j][i] for j in range(len(zoom))] for i in range(len(zoom[0]))]
+    plt.imshow(trans, 'gray')
     try:
         plt.show()
     except KeyboardInterrupt:
