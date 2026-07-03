@@ -2,13 +2,17 @@ from load_image import ft_load
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def main():
     img = ft_load("animal.jpeg")
     print(img)
     zoom = img[100:500, 450:850, 0:1]
-    print(f"The shape of the image is: {zoom.shape} or {np.squeeze(zoom).shape}")
+    small_shape = np.squeeze(zoom).shape
+    print(f"The shape of the image is: {zoom.shape} or {small_shape}")
     print(zoom)
-    trans = [[zoom[j][i] for j in range(len(zoom))] for i in range(len(zoom[0]))]
+    row = range(len(zoom))
+    col = range(len(zoom[0]))
+    trans = [[zoom[j][i] for j in row] for i in col]
     plt.imshow(trans, 'gray')
     try:
         plt.show()
