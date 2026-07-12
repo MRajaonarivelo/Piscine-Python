@@ -4,6 +4,7 @@ import numpy as np
 
 
 def main():
+    '''displays a square cut of animal.jpeg'''
     img = ft_load("animal.jpeg")
     print(img)
     zoom = img[100:500, 450:850, 0:1]

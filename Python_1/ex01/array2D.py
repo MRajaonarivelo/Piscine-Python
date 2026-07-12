@@ -2,6 +2,7 @@ import numpy as np
 
 
 def slice_me(family: list, start: int, end: int) -> list:
+    '''Slices an array and prints its new shape'''
     try:
         assert isinstance(family, list), "family has to be a list"
         assert isinstance(start, int) and isinstance(end, int), \

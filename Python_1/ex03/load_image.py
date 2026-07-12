@@ -8,6 +8,7 @@ def error_exit(msg: str):
 
 
 def ft_load(path: str) -> np.array:  # type: ignore
+    '''loads an image into an array'''
     try:
         assert path != "", "empty path name"
         assert isinstance(path, str), "path must be a string"

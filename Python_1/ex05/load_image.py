@@ -23,4 +23,5 @@ def ft_load(path: str) -> np.array:  # type: ignore
     except AssertionError as e:
         error_exit(e)
     print(f"the shape of the image is: {arr.shape}")
+    print(arr)
     return arr
