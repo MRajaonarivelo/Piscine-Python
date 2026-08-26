@@ -3,6 +3,7 @@ from PIL import Image, UnidentifiedImageError
 
 
 def error_exit(msg: str):
+    '''prints an error msg and exits the program'''
     print(f"Error: {msg}")
     exit()
 
