@@ -12,7 +12,7 @@ def load(path: str) -> pd.DataFrame:
     try:
         assert path != "", "empty path name"
         assert path.endswith(".csv"), "bad format"
-        res = pd.read_csv(path)
+        res = pd.read_csv(path, index_col="country")
     except FileNotFoundError:
         error_exit("File not foud")
     except AssertionError as e:
