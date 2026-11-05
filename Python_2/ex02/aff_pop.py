@@ -11,6 +11,10 @@ def convert(num: str) -> float:
 
 
 def main():
+    '''
+    shows a graph comparing the population total of France
+    and another country.
+    '''
     country = "Madagascar"
     data = load("population_total.csv")
     data_f = data.loc["France", "1800":"2050"].map(convert)

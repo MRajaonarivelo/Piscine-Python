@@ -3,6 +3,10 @@ import matplotlib.pyplot as plt
 
 
 def main():
+    '''
+    shows a graph of the life expectancy over the year
+    in France
+    '''
     country = "France"
     data = load("life_expectancy_years.csv").loc[country]
     plt.plot(data.index, data.values)
