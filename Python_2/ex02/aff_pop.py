@@ -3,6 +3,10 @@ import matplotlib.pyplot as plt
 
 
 def convert(num: str) -> float:
+    '''
+    extract the last charcter of a population value
+    and returns the according float value
+    '''
     suffixes = {'k': 1000, 'M': 1000000, 'B': 1000000000}
     last = num[-1]
     if (last in suffixes):
