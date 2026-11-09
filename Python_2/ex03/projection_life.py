@@ -13,6 +13,7 @@ def main():
     plt.title("1900")
     plt.xlabel("Gross domestic product")
     plt.ylabel("Life Excpectancy")
+    plt.xscale("log")
     plt.xticks([300, 1000, 10000], ["300", "1k", "10k"])
     plt.yticks(range(20, 56, 5))
     try:
