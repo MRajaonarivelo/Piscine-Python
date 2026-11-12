@@ -14,8 +14,10 @@ class Character(ABC):
         '''Makes the character ded function'''
         self.is_alive = False
 
+
 class Stark(Character):
     '''Stark, a Character subclass'''
+
     def __init__(self, first_name, is_alive=True):
         '''Constructor for Stark class'''
         self.fist_name = first_name
