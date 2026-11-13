@@ -19,6 +19,4 @@ class Stark(Character):
     '''Stark, a Character subclass'''
 
     def __init__(self, first_name, is_alive=True):
-        '''Constructor for Stark class'''
-        self.fist_name = first_name
-        self.is_alive = is_alive
+        super().__init__(first_name, is_alive)
