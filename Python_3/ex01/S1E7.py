@@ -5,6 +5,7 @@ class Baratheon(Character):
     '''Representing the Baratheon family'''
 
     def __init__(self, first_name, is_alive=True):
+        '''Constructor for Baratheon class'''
         super().__init__(first_name, is_alive)
         self.family_name = "Baratheon"
         self.eyes = "brown"
@@ -14,26 +15,29 @@ class Baratheon(Character):
         return f"Vector: {self.family_name, self.eyes, self.hairs}"
 
     def __str__(self):
-        return f"Vector: {self.family_name, self.eyes, self.hairs}"
-
+        '''Gives readable output of the class for printing'''
+        return repr(self)
 
 
 class Lannister(Character):
-    '''Lannister class, inherited from Character'''
+    '''Representing the Lannister family'''
 
     def __init__(self, first_name, is_alive=True):
+        '''Constructor for Lannister class'''
         super().__init__(first_name, is_alive)
         self.family_name = "Lannister"
         self.eyes = "blue"
         self.hairs = "light"
 
     def __repr__(self):
+        '''gives unambiguous representation of the class'''
         return f"Vector: {self.family_name, self.eyes, self.hairs}"
 
     def __str__(self):
-        return f"Vector: {self.family_name, self.eyes, self.hairs}"
+        '''Gives readable output of the class for printing'''
+        return repr(self)
 
     @classmethod
     def create_lannister(cls, name, alive):
-        res = Lannister(name, alive)
-        return res
+        '''class method to create a new Lannister'''
+        return cls(name, alive)
