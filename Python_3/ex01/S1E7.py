@@ -12,6 +12,7 @@ class Baratheon(Character):
         self.hairs = "dark"
 
     def __repr__(self):
+        '''gives unambiguous representation of the class'''
         return f"Vector: {self.family_name, self.eyes, self.hairs}"
 
     def __str__(self):
